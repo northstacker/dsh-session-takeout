@@ -1,5 +1,7 @@
 # dsh-session-takeout
 
+**English** · [简体中文](README.zh-CN.md)
+
 Packs one DeepSeek Harness conversation into a single ZIP, so you can carry it to
 another computer and keep talking there.
 
@@ -98,7 +100,7 @@ message box.
 ## Test
 
 ```bash
-node test/bundle.test.mjs   # 47 checks against fake services and a throwaway HOME
+node test/bundle.test.mjs   # 48 checks against fake services and a throwaway HOME
 ```
 
 ## License
