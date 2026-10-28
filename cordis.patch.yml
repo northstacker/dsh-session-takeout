@@ -1,0 +1,3 @@
+- insert:
+    - id: session-takeout
+      name: 'dsh-session-takeout'

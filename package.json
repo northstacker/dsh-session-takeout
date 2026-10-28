@@ -1,0 +1,57 @@
+{
+  "name": "dsh-session-takeout",
+  "version": "1.0.0",
+  "description": "Packs one conversation into a ZIP you can open on another computer, and restores it there",
+  "license": "MIT",
+  "author": "linbtin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/northstacker/dsh-session-takeout.git"
+  },
+  "homepage": "https://github.com/northstacker/dsh-session-takeout#readme",
+  "bugs": {
+    "url": "https://github.com/northstacker/dsh-session-takeout/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "session",
+    "export",
+    "portable",
+    "zip"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "zip.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "test/*.mjs"
+  ],
+  "scripts": {
+    "test": "node test/bundle.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
